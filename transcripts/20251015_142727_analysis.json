@@ -1,0 +1,16 @@
+{
+  "filename": "20251015_142727_WhatsApp Audio 2025-10-15 at 14.06.50_fd7c10a8.waptt.mp3",
+  "timestamp": "20251015_142727",
+  "transcript": " This is a test meeting we decided to launch the product next month.",
+  "analysis": {
+    "summary": "The meeting discussed the launch of a product, with a decision to proceed next month. The meeting appears to be a test meeting, possibly to gauge the team's readiness or to simulate a real meeting scenario. Further details about the product or launch plans are not provided in the transcript.",
+    "decisions": [
+      "Launch the product next month"
+    ],
+    "action_items": [],
+    "topics": [
+      "Product launch",
+      "Launch timeline"
+    ]
+  }
+}

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meeting Summarizer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🎙️ Meeting Summarizer</h1>
+            <p>Upload meeting audio to generate transcripts, summaries, and action items</p>
+        </header>
+
+        <div class="upload-section">
+            <div class="upload-box" id="uploadBox">
+                <svg class="upload-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                    <polyline points="17 8 12 3 7 8"></polyline>
+                    <line x1="12" y1="3" x2="12" y2="15"></line>
+                </svg>
+                <p class="upload-text">Click to upload or drag and drop</p>
+                <p class="upload-subtext">MP3, WAV, M4A, WebM (Max 50MB)</p>
+                <input type="file" id="audioFile" accept="audio/*" hidden>
+            </div>
+            <button id="uploadBtn" class="btn btn-primary" disabled>Process Meeting</button>
+        </div>
+
+        <div id="loadingSection" class="loading-section" style="display: none;">
+            <div class="spinner"></div>
+            <p id="loadingText">Processing your meeting audio...</p>
+        </div>
+
+        <div id="resultsSection" class="results-section" style="display: none;">
+            <h2>Results</h2>
+            
+            <div class="result-card">
+                <h3>📝 Transcript</h3>
+                <div id="transcript" class="content-box"></div>
+            </div>
+
+            <div class="result-card">
+                <h3>📊 Meeting Summary</h3>
+                <div id="summary" class="content-box"></div>
+            </div>
+
+            <div class="result-card">
+                <h3>✅ Key Decisions</h3>
+                <div id="decisions" class="content-box"></div>
+            </div>
+
+            <div class="result-card">
+                <h3>🎯 Action Items</h3>
+                <div id="actionItems" class="content-box"></div>
+            </div>
+
+            <div class="result-card">
+                <h3>💡 Topics Discussed</h3>
+                <div id="topics" class="content-box"></div>
+            </div>
+
+            <button id="newMeetingBtn" class="btn btn-secondary">Process Another Meeting</button>
+        </div>
+
+        <div id="errorSection" class="error-section" style="display: none;">
+            <div class="error-box">
+                <h3>❌ Error</h3>
+                <p id="errorMessage"></p>
+                <button id="retryBtn" class="btn btn-secondary">Try Again</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
